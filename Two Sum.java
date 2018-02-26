@@ -47,3 +47,29 @@ class Solution {
         return indices;
     }
 }
+
+
+//HashMap
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+    int N=nums.length;
+	int[] indices=new int[2];
+    HashMap<Integer,Integer> map=new HashMap<Integer,Integer>();
+    for(int i=0;i<N;i++)
+    {
+        map.put(nums[i],i);
+    }
+    for(int i=0;i<N;i++)
+    {
+        int t=target-nums[i];
+        if(map.containsKey(t) && map.get(t)!=i)
+        {
+            indices[0]=i;
+            indices[1]=map.get(t);
+            break;
+        }
+    }
+        
+        return indices;
+    }
+}
