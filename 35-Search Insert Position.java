@@ -18,6 +18,6 @@ class Solution {
                 l=mid+1;
             }
         }
-        return l;
+        return l;     //target如果不在数组中，则返回应插入的位置l，如果是r，需要加1；
     }
 }
